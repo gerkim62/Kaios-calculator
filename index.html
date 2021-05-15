@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hello World">
+  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+</head>
+<body>
+  <main>
+    
+    <div class="modal">
+      <!--<div class="wind"></div>-->
+  <ol>
+    <li onclick="updateDisplay(BASIC_DISPLAY)">Basic Operations (+, –, ×, ÷)</li>
+    <li onclick="updateDisplay(BRACKET_DISPLAY)">Negate, point and brackets</li>
+    <li onclick="updateDisplay(ROOT_DISPLAY)">Root Operations and percent</li>
+    <li onclick="updateDisplay(POWER_DISPLAY)">Exponent Operations</li>
+    <li onclick="updateDisplay(LOG_DISPLAY)">Logarithims</li>
+    <li onclick="updateDisplay(TRIG_DISPLAY)">Trigonemetric Operations</li>
+    <li onclick="updateDisplay(MODE_DISPLAY)">Mode Toggle</li>
+   <!-- <li onclick="updateDisplay(CONST_DISPLAY)">const</li>-->
+    <li onclick="updateDisplay(MEM_DISPLAY)">Memory Operations</li>
+    <li onclick="updateDisplay(EXP_DISPLAY)">Exponentiation</li>
+    <li value="0" onclick="updateDisplay(HYP_DISPLAY)">Hyperbole function</li>
+  </ol>
+    </div>
+
+  <p id="header">Calculator</p>
+  
+  <div id="screen">
+    <div id="inpt"></div>
+    <div id="ans">0</div>
+  </div>
+  
+  <div class="control-wrapper">
+  <div class="control">
+    <div class="fnct" id="top">+</div>
+    <div class="fnct" id="right">÷</div>
+    <div class="fnct" id="bottom">–</div>
+    <div class="fnct" id="left">×</div>
+    <div class="fnct" id="eq">=</div>
+  </div>
+  </div>
+
+
+  <footer>
+    <span class="ok-btn">OK</span>
+    <span class="back-btn">Back</span>
+  </footer>
+  </main>
+  
+  <div class="buttons">
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <button onnclick="initModal()">*</button>
+    <button class="btn">0</button>
+    <button onclick="display.push('.');expression.push('.');inpt.innerHTML=display.join('');">#</button>
+  </div>
+  
+
+  <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
