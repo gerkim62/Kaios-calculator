@@ -1,1 +1,219 @@
-# Kaios-calculator
+
+* {
+  user-select: none;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
+  color: wheat;
+  height: 320px;
+  width: 240px;
+  background-color: rgba(106,0,128,.25);
+  color: #FFF;
+  
+  /*background-color: #E1E2E1 !important;*/
+}
+
+#header {
+  background:linear-gradient(225deg,#9b27af, #9b27af);
+  color: #fff;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, .2);
+  width: 100%;
+  height: 20px;
+  border-bottom: 0px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#screen {
+  background: rgb(106, 0, 128);
+  text-align: right;
+  padding-right: 5px;
+  font-weight: 150;
+  color: #fff;
+  transition: 1s;
+  border-radius: 0;
+  margin: 0em;
+  box-shadow:inset 0px 0px 2.5px .1px black;
+}
+
+#inpt {
+  /*padding-top: 5px;*/
+  font-size: 25px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+#ans {
+  padding-right: 5px;
+  height: 50px;
+  font-size: 35px;
+}
+
+.control {
+  width: 145px;
+  height: 145px;
+  border: 5px solid rgb(106, 0, 128);
+  border-radius: 255px;
+  -moz-border-radius: 255px;
+  -webkit-border-radius: 255px;
+  -o-border-radius: 250px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  background: rgb(106, 0, 128);
+  padding: 0px;
+  box-shadow: 0px 0px 6px black;
+}
+
+
+
+.control .fnct {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  font-size: 26px;
+  color: wheat;
+  padding: 0px;
+  background: none;
+}
+
+.fnct:active {
+  color: yellow;
+}
+
+.control #top {
+  margin: auto;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+}
+
+.control #bottom {
+  margin: auto;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+
+.control #right {
+  margin: auto;
+  right: 10px;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.control #left {
+  margin: auto;
+  left: 10px;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+#eq {
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  left: 38px;
+  top: 35px;
+  position: absolute;
+  background: #64B624;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9b27af;
+}
+
+footer {
+  color: brown;
+}
+
+.back-btn {
+  position: absolute;
+  top: 300px;
+  margin-left: 200px;
+}
+
+.ok-btn {
+  margin-left: 5px;
+  position: absolute;
+  top: 300px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 240px;
+  height: Calc(100vh - 320px);
+  /*background: #60CE42;
+  border:none;*/
+}
+
+.wind{
+  z-index: 10;
+  position: relative;
+  width: 240px;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal{
+  display: none;
+  z-index: 10;
+  width: 240px;
+  height: 295px;
+  background: rgba(0, 0, 0, 0.85);
+  position: absolute;
+}
+
+li{
+  padding-left: 5px;
+  width: 210px;
+  margin: 10px 30px;
+  border-radius: 1px;
+  color: #fff;
+}
+
+li:hover{
+  font-size: 1rem;
+  background: rgba(106, 1, 128, 0.96);
+}
+
+.last-li{
+  list-style: none;
+  margin-left: 8px;
+}
+
+.last-li:before{
+  content: "0. "
+  
+}
+
+sup{
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+sub{
+  font-size: 13px;
+}
